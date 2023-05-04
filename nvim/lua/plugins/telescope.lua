@@ -5,11 +5,19 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
+		opts = {
+			defaults = {
+				file_ignore_patterns = {
+					"node_modules",
+					".git/",
+				},
+			},
+		},
 		keys = {
 			{
 				"<leader>ff",
 				function()
-					require("telescope.builtin").find_files()
+					require("telescope.builtin").find_files({ hidden = true })
 				end,
 			},
 			{
