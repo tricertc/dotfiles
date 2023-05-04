@@ -27,6 +27,20 @@ return {
 						end,
 					}),
 
+					b.formatting.eslint_d.with({
+						prefer_local = "./node_modules/.bin/eslint",
+						condition = function(utils)
+							return utils.root_has_file({
+								".eslintrc.js",
+								".eslintrc.cjs",
+								".eslintrc.yaml",
+								".eslintrc.yml",
+								".eslintrc.json",
+								".eslintrc",
+							})
+						end,
+					}),
+
 					b.diagnostics.eslint_d.with({
 						prefer_local = "./node_modules/.bin/eslint",
 						condition = function(utils)
@@ -49,7 +63,12 @@ return {
 							group = augroup,
 							buffer = bufnr,
 							callback = function()
-								vim.lsp.buf.format({ bufnr = bufnr })
+								vim.lsp.buf.format({
+									filter = function(_client)
+										return _client.name ~= "null-ls"
+									end,
+									bufnr = bufnr,
+								})
 							end,
 						})
 					end

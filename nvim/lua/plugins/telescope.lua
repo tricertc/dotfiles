@@ -38,6 +38,12 @@ return {
 					require("telescope.builtin").help_tags()
 				end,
 			},
+			{
+				"<leader>tv",
+				function()
+					require("telescope.builtin").git_status()
+				end,
+			},
 		},
 		config = true,
 	},
