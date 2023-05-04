@@ -7,6 +7,7 @@ return {
 			"folke/neodev.nvim",
 			"j-hui/fidget.nvim",
 			"b0o/schemastore.nvim",
+			"ray-x/lsp_signature.nvim",
 		},
 		config = function()
 			require("neodev").setup()
@@ -32,6 +33,14 @@ return {
 					lspconfig[server_name].setup({
 						settings = servers[server_name],
 						capabilities = capabilities,
+						on_attach = function(_, bufnr)
+							require("lsp_signature").on_attach({
+								bind = true,
+								handler_opts = {
+									border = "rounded",
+								},
+							}, bufnr)
+						end,
 					})
 				end,
 			})
