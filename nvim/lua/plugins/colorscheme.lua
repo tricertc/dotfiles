@@ -1,17 +1,13 @@
 return {
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        borders = "transparent",
-      },
-    },
-    init = function()
-      vim.cmd("colorscheme tokyonight")
-    end,
-  },
+	"catppuccin/nvim",
+	name = "catppuccin",
+	lazy = false,
+	priority = 1000,
+	opts = {
+		flavour = "mocha",
+		transparent_background = true,
+	},
+	init = function()
+		vim.cmd("colorscheme catppuccin")
+	end,
 }

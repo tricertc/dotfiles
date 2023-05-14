@@ -27,3 +27,4 @@ opt.wrap = false
 
 opt.ignorecase = true
 opt.smartcase = true
+opt.iskeyword:append("-")

@@ -1,0 +1,25 @@
+live_config_reload: true
+
+import:
+  - ~/.config/alacritty/themes/catppuccin-mocha.yml
+  # - ~/.config/alacritty/themes/Tokyonight_Night.yml
+  # - ~/.config/alacritty/themes/rose-pine.yml
+
+font:
+  normal:
+    family: 'Hack Nerd Font Mono'
+    style: Regular
+  size: 16.0
+
+window:
+  opacity: 0.95 
+  option_as_alt: Both
+  dimensions:
+    columns: 120
+    lines: 50
+  padding:
+    x: 16
+    y: 12 
+
+env:
+  TERM: xterm-256color

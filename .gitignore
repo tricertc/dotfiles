@@ -4,3 +4,9 @@
 !nvim
 !nvim/**
 nvim/lazy-lock.json
+
+!alacritty
+!alacritty/**
+
+!tmux
+!tmux/**

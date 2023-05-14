@@ -29,7 +29,14 @@ M.cssls = {
   },
 }
 
+M.yamlls = {
+  yaml = {
+    schemas = require("schemastore").yaml.schemas(),
+  },
+}
+
 M.tsserver = {}
+
 M.emmet_ls = {}
 M.tailwindcss = {}
 
