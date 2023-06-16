@@ -14,10 +14,12 @@ return {
 				"markdown",
 				"markdown_inline",
 				"prisma",
+				"http",
 			},
 			autotag = { enable = true },
 			highlight = { enable = true },
 			indent = { enable = true },
+			matchup = { enable = true },
 		})
 	end,
 }

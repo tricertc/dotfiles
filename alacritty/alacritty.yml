@@ -1,24 +1,33 @@
 live_config_reload: true
 
 import:
+  # - ~/.config/alacritty/themes/catppuccin-frappe.yml
   - ~/.config/alacritty/themes/catppuccin-mocha.yml
   # - ~/.config/alacritty/themes/Tokyonight_Night.yml
   # - ~/.config/alacritty/themes/rose-pine.yml
 
 font:
+  size: 17
   normal:
-    family: 'Hack Nerd Font Mono'
+    family: "JetBrainsMono Nerd Font"
     style: Regular
-  size: 16.0
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Italic
+
 
 window:
-  opacity: 0.95 
+  opacity: 0.99 
   option_as_alt: Both
+  decorations: buttonless
   dimensions:
-    columns: 120
-    lines: 50
+    columns: 150
+    lines: 70 
   padding:
-    x: 16
+    x: 8
     y: 12 
 
 env:

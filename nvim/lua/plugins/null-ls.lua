@@ -43,7 +43,6 @@ return {
 						prefer_local = "./node_modules/.bin/prettier",
 						condition = function(utils)
 							return utils.root_has_file({
-								"prettier.config.js",
 								".prettierrc",
 								".prettierrc.json",
 								".prettierrc.yml",
@@ -51,6 +50,8 @@ return {
 								".prettierrc.js",
 								".prettierrc.cjs",
 								".prettierrc.toml",
+								"prettier.config.js",
+								"prettier.config.cjs",
 							})
 						end,
 					}),

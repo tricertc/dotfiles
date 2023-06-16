@@ -1,5 +1,6 @@
 return {
 	{ "windwp/nvim-autopairs", config = true },
+	{ "windwp/nvim-ts-autotag" },
 	{ "lewis6991/gitsigns.nvim", config = true },
 	{ "tpope/vim-fugitive" },
 	{
@@ -33,5 +34,23 @@ return {
 				mode = "v",
 			},
 		},
+	},
+	{
+		"danymat/neogen",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		keys = {
+			{
+				"<leader>nf",
+				function()
+					require("neogen").generate({})
+				end,
+			},
+		},
+		config = true,
+	},
+	{
+		"andymass/vim-matchup",
 	},
 }

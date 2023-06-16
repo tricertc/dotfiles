@@ -28,3 +28,11 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 opt.iskeyword:append("-")
+
+opt.splitright = true
+opt.splitbelow = true
+
+vim.cmd([[
+  set t_ZH=^[[3m
+  set t_ZR=^[[23m
+]])

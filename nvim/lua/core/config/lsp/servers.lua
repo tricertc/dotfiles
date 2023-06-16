@@ -17,7 +17,7 @@ M.lua_ls = {
 M.jsonls = {
 	json = {
 		schemas = require("schemastore").json.schemas(),
-		validate = { enable = true },
+		validate = { enable = false },
 	},
 }
 
@@ -38,7 +38,16 @@ M.yamlls = {
 M.tsserver = {}
 
 M.emmet_ls = {}
-M.tailwindcss = {}
+
+M.tailwindcss = {
+	tailwindCSS = {
+		experimental = {
+			classRegex = {
+				{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+			},
+		},
+	},
+}
 
 M.prismals = {}
 
