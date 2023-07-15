@@ -23,3 +23,5 @@ nmap("<leader>W", "<cmd>w!<cr>")
 nmap("<leader>bp", "<cmd>bprevious<cr>")
 nmap("<leader>bn", "<cmd>bnnext<cr>")
 nmap("<leader>bd", "<cmd>bdelete<cr>")
+
+nmap("<C-a>", "ggVG")

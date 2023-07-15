@@ -2,12 +2,12 @@ live_config_reload: true
 
 import:
   # - ~/.config/alacritty/themes/catppuccin-frappe.yml
-  - ~/.config/alacritty/themes/catppuccin-mocha.yml
-  # - ~/.config/alacritty/themes/Tokyonight_Night.yml
+  # - ~/.config/alacritty/themes/catppuccin-mocha.yml
+  - ~/.config/alacritty/themes/Tokyonight_Night.yml
   # - ~/.config/alacritty/themes/rose-pine.yml
 
 font:
-  size: 17
+  size: 15
   normal:
     family: "JetBrainsMono Nerd Font"
     style: Regular

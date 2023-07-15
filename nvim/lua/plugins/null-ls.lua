@@ -32,8 +32,6 @@ return {
 			local null_ls = require("null-ls")
 			local b = null_ls.builtins
 
-			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
 			null_ls.setup({
 				sources = {
 					b.formatting.stylua,
@@ -52,6 +50,7 @@ return {
 								".prettierrc.toml",
 								"prettier.config.js",
 								"prettier.config.cjs",
+								"prettier.config.mjs",
 							})
 						end,
 					}),

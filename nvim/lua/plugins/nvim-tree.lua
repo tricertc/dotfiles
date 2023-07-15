@@ -15,7 +15,7 @@ return {
 			},
 			renderer = {
 				group_empty = false,
-        highlight_opened_files = "name",
+				highlight_opened_files = "name",
 			},
 			view = {
 				cursorline = true,
