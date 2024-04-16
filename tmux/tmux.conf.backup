@@ -1,0 +1,48 @@
+setw -g mouse on
+
+# plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
+
+# default statusbar colors
+#――――――――――――――――――――――――――――――――
+set-option -g status-bg default
+set-option -g status-fg colour240
+
+# default window title colors
+#―――――――――――――――――――――――――――――――
+set-window-option -g window-status-style fg=magenta
+set-window-option -g window-status-style bg=default
+
+set -g status-left-length 85
+set -g status-left "working on#[fg=colour135] #S"
+set -g window-status-current-format "#[fg=black,bold bg=default]│#[fg=white bg=cyan]#W#[fg=black,bold bg=default]│"
+set -g window-status-current-format "#[fg=black,bold bg=default]│#[fg=colour135 bg=black]#W#[fg=black,bold bg=default]│"
+set -g status-style bg=default
+set -g status-right "#[fg=magenta] #[bg=gray] %b %d %Y %l:%M %p"
+set -g status-right '#(gitmux "#{pane_current_path}")'
+set -g status-justify centre
+
+# set -g @plugin 'dracula/tmux'
+# set -s default-terminal 'screen-256color'
+
+# dracula customizations
+# set -g @dracula-plugins "battery weather time"
+# set -g @dracula-show-powerline true
+# set -g @dracula-show-fahrenheit true
+# set -g @dracula-military-time true
+
+# bindings
+bind s set-option -g status
+bind C-s set-option -g status
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+run '~/.tmux/plugins/tpm/tpm'
+

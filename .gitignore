@@ -1,0 +1,14 @@
+*
+!.gitignore
+
+!nvim
+!nvim/**
+nvim/lazy-lock.json
+nvim/after/**/*
+
+!alacritty
+!alacritty/**
+
+!tmux
+!tmux/**
+tmux/plugins
