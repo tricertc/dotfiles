@@ -3,6 +3,7 @@ local eslint_files = {
   ".eslintrc.js",
   ".eslintrc.cjs",
   ".eslintrc.json",
+  "eslint.config.mjs",
 }
 
 local prettier_files = {
@@ -10,6 +11,7 @@ local prettier_files = {
   ".prettierrc.js",
   ".prettierrc.json",
   "prettier.config.cjs",
+  "prettier.config.mjs",
 }
 
 local function root_has_file(files)

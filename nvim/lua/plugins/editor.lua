@@ -65,4 +65,15 @@ return {
       vim.fn["mkdp#util#install"]()
     end,
   },
+  {
+    "ziontee113/icon-picker.nvim",
+    keys = {
+      { "<leader><leader>i", "<cmd>IconPickerNormal<cr>", mode = "n", desc = "Pick an icon" },
+      { "<leader><leader>y", "<cmd>IconPickerYank<cr>", mode = "n", desc = "Yank an icon" },
+      { "<C-i>", "<cmd>IconPickerInsert<cr>", mode = "i", desc = "Pick an icon" },
+    },
+    opts = {
+      disable_legacy_commands = true,
+    },
+  },
 }

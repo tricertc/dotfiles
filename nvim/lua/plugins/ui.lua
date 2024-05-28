@@ -7,7 +7,19 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require("nvim-tree").setup({})
+      require("nvim-tree").setup({
+        view = {
+          cursorline = true,
+          width = {
+            min = 30,
+            max = "50%",
+          },
+          side = "left",
+        },
+        renderer = {
+          full_name = true,
+        },
+      })
     end,
   },
   {
@@ -69,6 +81,7 @@ return {
   {
     "folke/noice.nvim",
     event = "VeryLazy",
+    enabled = false,
     opts = {
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
