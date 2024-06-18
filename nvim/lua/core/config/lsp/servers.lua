@@ -1,6 +1,12 @@
 local M = {}
 
-M.cssls = {}
+M.cssls = {
+  css = {
+    lint = {
+      unknownAtRules = "ignore",
+    },
+  },
+}
 
 M.emmet_ls = {}
 

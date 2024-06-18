@@ -27,6 +27,9 @@ wk.register({
     h = { "<cmd>Telescope help_tags<cr>", "Telescope help tags" },
     r = { "<cmd>Telescope lsp_references<cr>", "Telescope find references" },
   },
+  m = {
+    o = { "<cmd>Telescope symbols<cr>", "Telescope symbols" },
+  },
 }, { prefix = "<leader>" })
 
 wk.register({
@@ -46,8 +49,8 @@ wk.register({
 wk.register({
   name = "Trouble",
   x = {
-    x = { "<cmd>TroubleToggle<cr>", "Trouble diagnostics" },
-    d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble document diagnostics" },
+    x = { "<cmd>Trouble diagnostics toggle<cr>", "Trouble diagnostics" },
+    d = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Trouble document diagnostics" },
   },
 }, { prefix = "<leader>" })
 

@@ -41,6 +41,7 @@ return {
       })
     end,
   },
+  { "nvim-telescope/telescope-symbols.nvim" },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make",

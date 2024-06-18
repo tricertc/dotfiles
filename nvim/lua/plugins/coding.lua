@@ -3,6 +3,7 @@ local eslint_files = {
   ".eslintrc.js",
   ".eslintrc.cjs",
   ".eslintrc.json",
+  "eslint.config.js",
   "eslint.config.mjs",
 }
 
@@ -10,6 +11,7 @@ local prettier_files = {
   ".prettierrc",
   ".prettierrc.js",
   ".prettierrc.json",
+  "prettier.config.js",
   "prettier.config.cjs",
   "prettier.config.mjs",
 }
@@ -25,6 +27,7 @@ local function root_has_file(files)
 end
 
 return {
+  { "windwp/nvim-autopairs", config = true },
   { "windwp/nvim-ts-autotag", config = true },
   {
     "stevearc/conform.nvim",
@@ -68,8 +71,10 @@ return {
         ensure_installed = { "lua", "vim", "vimdoc", "javascript", "html", "markdown", "markdown_inline" },
         sync_install = false,
         ignore_install = {},
+        -- autotag = { enable = true },
         highlight = { enable = true },
         indent = { enable = true },
+        matchup = { enable = true },
         modules = {},
       })
     end,
