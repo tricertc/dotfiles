@@ -21,4 +21,15 @@ M.lua_ls = {}
 
 M.tsserver = {}
 
+M.tailwindcss = {
+  tailwindCSS = {
+    experimental = {
+      classRegex = {
+        { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+        { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+      },
+    },
+  },
+}
+
 return M

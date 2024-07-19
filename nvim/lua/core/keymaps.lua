@@ -3,74 +3,43 @@ if not success then
   return
 end
 
-wk.register({
-  name = "General",
-  ["<C-a>"] = { "ggVG", "Select all" },
-  ["<leader>"] = {
-    n = {
-      g = { "<cmd>Neogen<cr>", "Generate comments" },
-    },
-  },
-})
+wk.add({
+  -- General
+  { "<C-a>", "ggVG", desc = "Select all" },
+  { "<leader>ng", "<cmd>Neogen<cr>", desc = "Generate comments" },
 
-wk.register({
-  name = "NvimTree",
-  e = { "<cmd>NvimTreeToggle<cr>", "NvimTree toggle" },
-  fe = { "<cmd>NvimTreeFindFile<cr>", "NvimTree find file" },
-}, { prefix = "<leader>" })
-wk.register({
-  name = "Telescope",
-  f = {
-    f = { "<cmd>Telescope find_files<cr>", "Telescope find files" },
-    g = { "<cmd>Telescope live_grep<cr>", "Telescope live gre" },
-    b = { "<cmd>Telescope buffers", "Telescope buffers" },
-    h = { "<cmd>Telescope help_tags<cr>", "Telescope help tags" },
-    r = { "<cmd>Telescope lsp_references<cr>", "Telescope find references" },
-  },
-  m = {
-    o = { "<cmd>Telescope symbols<cr>", "Telescope symbols" },
-  },
-}, { prefix = "<leader>" })
+  -- NvimTree
+  { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "NvimTree toggle" },
+  { "<leader>fe", "<cmd>NvimTreeFindFile<cr>", desc = "NvimTree find file" },
 
-wk.register({
-  name = "Buffers",
-  ["<Tab>"] = { "<cmd>bn<cr>", "Next buffer" },
-  ["<S-Tab>"] = { "<cmd>bp<cr>", "Previous buffer" },
-  ["<leader>"] = {
-    b = {
-      o = { "<cmd>BufferLineCloseOthers<cr>", "Close other buffers" },
-      d = { MiniBufremove.delete, "Delete buffer" },
-      c = { MiniBufremove.delete, "Delete buffer" },
-      w = { MiniBufremove.wipeout, "Delete buffer" },
-    },
-  },
-})
+  -- Telescope
+  { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope find files" },
+  { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope live gre" },
+  { "<leader>fb", "<cmd>Telescope buffers", desc = "Telescope buffers" },
+  { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Telescope help tags" },
+  { "<leader>fr", "<cmd>Telescope lsp_references<cr>", desc = "Telescope find references" },
+  { "<leader>mo", "<cmd>Telescope symbols<cr>", desc = "Telescope symbols" },
 
-wk.register({
-  name = "Trouble",
-  x = {
-    x = { "<cmd>Trouble diagnostics toggle<cr>", "Trouble diagnostics" },
-    d = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Trouble document diagnostics" },
-  },
-}, { prefix = "<leader>" })
+  -- Buffers
+  { "<Tab>", "<cmd>bn<cr>", desc = "Next buffer" },
+  { "<S-Tab>", "<cmd>bp<cr>", desc = "Previous buffer" },
+  { "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", desc = "Close other buffers" },
+  { "<leader>bd", MiniBufremove.delete, desc = "Delete buffer" },
+  { "<leader>bc", MiniBufremove.delete, desc = "Delete buffer" },
+  { "<leader>bw", MiniBufremove.wipeout, desc = "Delete buffer" },
 
-wk.register({
-  name = "Noice",
-  n = {
-    d = { "<cmd>NoiceDismiss<cr>", "Dismiss alerts" },
-    h = { "<cmd>NoiceHistory<cr>", "Alert history" },
-  },
-}, { prefix = "<leader>" })
+  -- Trouble
+  { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Trouble diagnostics" },
+  { "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Trouble document diagnostics" },
 
-wk.register({
-  name = "Copilot",
-  c = {
-    p = { "<cmd>Copilot panel<cr>", "Copilot panel" },
-  },
-}, { prefix = "<leader>" })
+  -- Noice
+  { "<leader>nd", "<cmd>NoiceDismiss<cr>", desc = "Dismiss alerts" },
+  { "<leader>nh", "<cmd>NoiceHistory<cr>", desc = "Alert history" },
 
-wk.register({
-  name = "TwoslashQueries",
-  ["<C-t><C-t>"] = { "<cmd>TwoslashQueriesInspect<cr>", "TwoslashQueries inspect" },
-  ["<C-t>"] = { "<cmd>TwoslashQueriesRemove<cr>", "TwoslashQueries remove" },
+  -- Copilot
+  { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "Copilot panel" },
+
+  -- TwoslashQueries
+  { "<C-t><C-t>", "<cmd>TwoslashQueriesInspect<cr>", desc = "TwoslashQueries inspect" },
+  { "<C-t>", "<cmd>TwoslashQueriesRemove<cr>", desc = "TwoslashQueries remove" },
 })
