@@ -7,6 +7,7 @@ return {
       require("mini.comment").setup()
       -- require("mini.pairs").setup()
       require("mini.bufremove").setup()
+      -- require("mini.completion").setup()
     end,
   },
 }
