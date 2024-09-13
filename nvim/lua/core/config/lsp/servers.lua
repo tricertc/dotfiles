@@ -19,7 +19,7 @@ M.jsonls = {
 
 M.lua_ls = {}
 
-M.tsserver = {}
+M.ts_ls = {}
 
 M.tailwindcss = {
   tailwindCSS = {
