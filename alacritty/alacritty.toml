@@ -1,33 +1,40 @@
-import = ["./themes/catppuccin_mocha.toml"]
 
-live_config_reload = true
+# family = "Hack Nerd Font"
+# family = "0xProto Nerd Font Mono"
+# family = "Monaspace Neon"
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 14 
 
 [font.bold]
-family = "Inconsolata Nerd Font mono"
+family = "0xProto Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "Inconsolata Nerd Font mono"
+family = "0xProto Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "Inconsolata Nerd Font mono"
+family = "0xProto Nerd Font Mono"
 style = "Regular"
 
 [window]
 decorations = "full"
-# opacity = 0.98
+opacity = 0.98
 
 [window.dimensions]
-columns = 180
-lines = 60 
+columns = 120 
+lines = 50 
 
 [window.padding]
 x = 8
 y = 12
+
+[general]
+
+live_config_reload = true
+#import = ["~/.config/alacritty/themes/github_dark.toml"]
+import = ["~/.config/alacritty/themes/tokyo-night.toml"]

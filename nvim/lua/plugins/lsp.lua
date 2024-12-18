@@ -44,7 +44,7 @@ return {
                 ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
               },
               on_attach = function(client, bufnr)
-                if client.name == "tsserver" then
+                if client.name == "ts_ls" then
                   client.server_capabilities.documentFormattingProvider = false
                   require("twoslash-queries").attach(client, bufnr)
                 end

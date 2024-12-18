@@ -25,3 +25,10 @@ vim.o.termguicolors = true
 
 vim.o.splitbelow = true
 vim.o.splitright = true
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.prisma",
+  callback = function()
+    vim.bo.shiftwidth = 4
+  end,
+})

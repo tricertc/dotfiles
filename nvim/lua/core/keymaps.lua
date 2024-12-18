@@ -37,7 +37,11 @@ wk.add({
   { "<leader>nh", "<cmd>NoiceHistory<cr>", desc = "Alert history" },
 
   -- Copilot
-  { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "Copilot panel" },
+  -- { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "Copilot panel" },
+  { "<leader>ccp", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat toggle" },
+  { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat explain" },
+  { "<leader>cco", "<cmd>CopilotChatOptimize<cr>", desc = "CopilotChat optimize" },
+  { "<leader>ccr", "<cmd>CopilotChatReview<cr>", desc = "CopilotChat review" },
 
   -- TwoslashQueries
   { "<C-t><C-t>", "<cmd>TwoslashQueriesInspect<cr>", desc = "TwoslashQueries inspect" },

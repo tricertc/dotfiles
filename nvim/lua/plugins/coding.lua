@@ -146,4 +146,22 @@ return {
     end,
   },
   { "danymat/neogen", config = true },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "main",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
+    opts = {
+      debug = true, -- Enable debugging
+      context = "buffer",
+      -- See Configuration section for rest
+      model = "claude-3.5-sonnet",
+      window = {
+        width = 0.4,
+      },
+    },
+    -- See Commands section for default commands if you want to lazy load on them
+  },
 }
